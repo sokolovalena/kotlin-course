@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "2.0.10"
 }
 
-group = "org.example"
+group = "ru.kotiki"
 version = "1.0-SNAPSHOT"
 
 repositories {
