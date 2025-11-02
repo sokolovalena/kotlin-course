@@ -14,7 +14,7 @@ class Rack(val maxShelves: Int) {
     fun removeShelf(index: Int): List<String> {
         if (index in 0 until shelves.size) {
             val removedShelf = shelves.removeAt(index)
-            return removedShelf.getItems()
+            return removedShelf.getItemssss()
         }
         return emptyList()
     }
@@ -46,7 +46,7 @@ class Rack(val maxShelves: Int) {
         return false
     }
 
-    fun getShelves(): List<Shelf> {
+    fun getShelvesss(): List<Shelf> {
         return shelves.toList()
     }
 
@@ -55,7 +55,7 @@ class Rack(val maxShelves: Int) {
             println("Индекс полки ${index + 1}:")
             println("Вместимость полки: ${shelf.capacity}")
             println("Оставшаяся вместимость: ${shelf.getRemainingCapacity()}")
-            println("Список предметов: ${shelf.getItems()}")
+            println("Список предметов: ${shelf.getItemssss()}")
         }
     }
 
@@ -66,7 +66,7 @@ class Rack(val maxShelves: Int) {
 
         val removedShelf = shelves.removeAt(index)
         val unplacedItems = mutableListOf<String>()
-        val itemsToReallocate = removedShelf.getItems().sortedByDescending { it.length }
+        val itemsToReallocate = removedShelf.getItemssss().sortedByDescending { it.length }
 
         for (item in itemsToReallocate) {
             var placed = false

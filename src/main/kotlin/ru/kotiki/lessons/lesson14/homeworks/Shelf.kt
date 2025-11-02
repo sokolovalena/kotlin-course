@@ -23,7 +23,7 @@ class Shelf(val capacity: Int) {
         return items.contains(item)
     }
 
-    fun getItems(): List<String> {
+    fun getItemssss(): List<String> {
         return items.toList()
     }
 
