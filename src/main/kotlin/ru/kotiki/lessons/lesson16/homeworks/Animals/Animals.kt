@@ -1,0 +1,32 @@
+package org.example.ru.kotiki.lessons.lesson16.homeworks.Animals
+
+open class Animals {
+    open fun makeSound() {
+        println("${Colors.WHITE}This animal makes no sound.${Colors.RESET}")
+    }
+}
+
+object Colors {
+    const val RESET = "\u001B[0m"
+    const val BLACK = "\u001B[30m"
+    const val RED = "\u001B[31m"
+    const val GREEN = "\u001B[32m"
+    const val YELLOW = "\u001B[33m"
+    const val BLUE = "\u001B[34m"
+    const val PURPLE = "\u001B[35m"
+    const val CYAN = "\u001B[36m"
+    const val WHITE = "\u001B[37m"
+}
+
+fun main() {
+    val animals = listOf<Animals>(
+        Animals(),
+        Dog(),
+        Cat(),
+        Bird()
+    )
+
+    for (animal in animals) {
+        animal.makeSound()
+    }
+}
